@@ -1,0 +1,49 @@
+<!doctype html> 
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" /> <!-- jquery styling -->
+		<title> Payment </title> 
+		<script src="slideshow.js"></script> 
+
+		<script>
+ 		 </script>
+
+	</head>
+
+	<body> 
+		<article style="background-color: #FFFFFF; margin: 4%;">
+			<section style="padding: 3%;">
+				<h3 style="color:#330033;"> Payment Details </h3>
+
+				<form name="paymentform" > <!-- onSubmit="" -->
+
+					<p> Number of Tickets </p> <!--  Only lets you buy 1 ticket -->
+						<select name="amount"> 
+							<option value="adult"> Adult (€10)</option>
+							<option value="senior">Senior (€7)</option>
+							<option value="student">Student (€6)</option>
+							<option value="child">Child (€5)</option>
+							<option value="family1">Family (2 adult + 2 Children) (€25)</option>
+							<option value="family2">Family (2 adult + 3/4 Children) (€30)</option>
+						</select>
+
+					<p> Card Type: <select name="card"> </p>
+  									<option value="visa">VISA</option>
+ 									<option value="mastercard">Mastercard</option>
+ 									<option value="laser">Laser</option>
+  									<option value="other">Other</option>
+								</select>
+					<p>Name on Card: <input type="text" name="cardholder" id="cardholder"/> </p>
+					<p>Card Number: <input type="text" name="cardnumber" id="cardnumber"/> </p>
+					<p>Email Address: <input type="text" name="email" id="email"/> </p>
+
+					
+					<input type="button" name="pay" value="Proceed with Payment" onClick="submitPayment(document.paymentform.card.value, document.paymentform.cardholder.value, document.paymentform.email.value, document.paymentform.amount.value)"> <!-- onClick="return validatePaymentDetails(document.paymentform.cardnumber.value, document.paymentform.cardholder.value, document.paymentform.email.value, document.paymentform.amount.value)" -->
+				</form>
+			</section>
+		</article>
+	</body>
+
+</html>

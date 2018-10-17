@@ -1,0 +1,99 @@
+<!doctype html> 
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" /> <!-- jquery styling -->
+		<title> Purchase Tickets for Loftus Hall </title> 
+		<script src="slideshow.js"></script> 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> <!--jquery compressed library-->
+  		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> <!--jquery ui library, compressed -->
+  		<style>
+			body {
+			    background-image: url("./images/background1.jpg");
+			}
+		</style>
+
+		<script>
+			// script to rewrite window
+			function purchaseTickets() {
+				window.open("payment.html", "_self");
+			}
+			// script to display calendar in form //
+			$(document).ready(function() {
+		    	$("#datepicker").datepicker();
+		 	 });
+
+ 		 </script>
+
+	</head>
+
+	<body> 
+		<article style="background-color: #FFFFFF; margin: 4%;">
+			<section style="padding: 3%;">
+				<h3 style="color:#330033;"> Purchase Tickets to Visit Loftus Hall </h3>
+
+				<form name="calendarform" action="" method="post">
+
+					Choose Your Date: <input type="text" name="startdate" id="datepicker"/> <!-- Not coded 100%, lets you pick date in the past. -->
+					
+					<input type="button" value="Submit" onclick="purchaseTickets()" >
+
+				</form>
+			</section>
+
+			<section style="margin-left: 4%; padding-bottom: 20%;"> 
+				<h3> Prices (Discounts for 6+)</h5>
+
+					<table>
+						<tr>
+						<td>
+						<strong>Ticket Type</strong>
+						</td>
+						<td>
+						<strong>Price</strong>
+						</td>
+						</tr>
+						
+						<tr>
+						<td>Adult</td>
+						<td>€10</td>
+						</tr>
+						
+						<tr>
+						<td>Senior</td>
+						<td>€7</td>
+						</tr>
+						
+						<tr>
+						<td>Student(12-18 years or holder of a student card)</td>
+						<td>€6</td>
+						</tr>
+						
+						<tr>
+						<td>Child(4-11 years)</td>
+						<td>€5</td>
+						</tr>
+						
+						<tr>
+						<td>Infants 0-3</td>
+						<td>Free</td>
+						</tr>
+						
+						<tr>
+						<td>Family Ticket(2 Adults + 2 Children)</td>
+						<td>€25</td>
+						</tr>
+						
+						<tr>
+						<td>Family Ticket(2 Adults + 3/4 Children)</td>
+						<td>€30</td>
+						</tr>
+					
+				</table>
+				<p> For groups (6+), call: <a href="tel:+3531234567"> 01 234567 </a> </p>
+			</section>
+		</article>
+	</body>
+
+</html>

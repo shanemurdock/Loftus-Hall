@@ -1,0 +1,181 @@
+<!doctype html> 
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" type="text/css" href="general.css">
+		<title> Loftus Hall - Key Info</title>
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script src="slideshow.js"></script> 
+<!-- script function for map -->		
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(52.148577, -6.910711),
+    zoom:15,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+	</head>
+
+	<body> 
+		<header> Loftus Hall </header>
+		<!-- NAV BAR, don't modify -->
+			<nav>
+				<ul class="topnav">
+					<li> <a href="home.html"> Home </a> </li> 
+
+					<li> <a href="history.html"> History </a> </li>
+
+					<li> <a href="contactus.html"> Contact</a> 
+					</li>
+
+					<li> <a href="about.html"> About Us </a> 
+						<!-- <ul class="subnav">
+							<li> <a href=""> Something </a> </li>
+							<li> <a href=""> Something else </a> </li>
+						</ul> -->
+					</li>
+
+					<li> <a href="photogallery.html"> Photo Gallery </a> </li>
+
+					<li> <a href="keyinfo.html"> Key Info </a> </li>
+
+					<li> <a href="review.html"> Reviews </a> </li>
+
+				</ul>
+			</nav>
+
+		<!-- NAV BAR, don't modify -->
+
+		<article> 
+
+			<div class="content">
+			
+			<h1>Opening Times For 2016</h1>
+				<div class="openinghours" style="max-width:800px;position:relative">
+
+				<img class="mySlides" src="images/1.png" alt="January" style="width:100%">
+				<img class="mySlides" src="images/2.png" alt="February" style="width:100%">
+				<img class="mySlides" src="images/3.png" alt="March" style="width:100%">
+				<img class="mySlides" src="images/4.png" alt="April" style="width:100%">
+				<img class="mySlides" src="images/5.png" alt="May" style="width:100%">
+				<img class="mySlides" src="images/6.png" alt="June" style="width:100%">
+				<img class="mySlides" src="images/7.png" alt="July" style="width:100%">
+				<img class="mySlides" src="images/8.png" alt="August" style="width:100%">
+				<img class="mySlides" src="images/9.png" alt="September" style="width:100%">
+				<img class="mySlides" src="images/10.png" alt="October" style="width:100%">
+				<img class="mySlides" src="images/11.png" alt="November" style="width:100%">
+				<img class="mySlides" src="images/12.png" alt="December" style="width:100%">
+				
+
+				<a class="back" style="position:absolute;top:45%;left:0;cursor:pointer;" onclick="plusDivs(-1)">❮</a>
+				<a class="forward" style="position:absolute;top:45%;right:0;cursor:pointer;" onclick="plusDivs(1)">❯</a>
+
+</div>
+<!-- script function for image slider -->
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+			
+			
+				<table>
+					<tr>
+					<td>
+					<strong>Ticket Type</strong>
+					</td>
+					<td>
+					<strong>Price</strong>
+					</td>
+					</tr>
+					
+					<tr>
+					<td>Adult</td>
+					<td>€10</td>
+					</tr>
+					
+					<tr>
+					<td>Senior</td>
+					<td>€7</td>
+					</tr>
+					
+					<tr>
+					<td>Student(12-18 years or holder of a student card)</td>
+					<td>€6</td>
+					</tr>
+					
+					<tr>
+					<td>Child(4-11 years)</td>
+					<td>€5</td>
+					</tr>
+					
+					<tr>
+					<td>Infants 0-3</td>
+					<td>Free</td>
+					</tr>
+					
+					<tr>
+					<td>Family Ticket(2 Adults + 2 Children)</td>
+					<td>€25</td>
+					</tr>
+					
+					<tr>
+					<td>Family Ticket(2 Adults + 3/4 Children)</td>
+					<td>€30</td>
+					</tr>
+					
+				</table>
+					<br>
+					
+				
+				<form method="POST" name="pricelist">
+				Ticket Type:
+				<select>
+				<option value="Adult">Adult</option>
+				<option value="Senior">Senior</option>
+				<option value="Student">Student</option>
+				<option value="Child">Child</option>
+				<option value="Family-2 Adult+2 Children">2 Adult+2 Children</option>
+				<option value="Family-2 Adult+3/4 Children">2 Adult+3/4 Children</option>
+				</select><br>
+				
+				<input type="submit" value="Buy Ticket(s)" onClick="buyTickets()" />
+					
+				</form>
+				
+				<h1> Location </h1>
+				<p> Loftus Hall, Hook Head, New Ross, Wexford. </p>
+				
+				<div id="googleMap" style="width:700px;height:500px;"></div>
+				
+				
+			</div>
+
+		</article>
+
+		<footer>
+			©2016 Team 4
+		</footer>
+
+	</body>
+
+</html>
