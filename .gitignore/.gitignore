@@ -1,0 +1,80 @@
+<!doctype html> 
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" type="text/css" href="general.css">
+		<title> Loftus Hall - Home </title> 
+		<script src="slideshow.js"></script> 
+
+
+		
+	</head>
+
+	<body> 
+		<header> Loftus Hall </header>
+		<!-- NAV BAR, don't modify -->
+			<nav>
+				<ul class="topnav">
+					<li> <a href="home.html"> Home </a> </li> 
+
+					<li> <a href="history.html"> History </a> </li>
+
+					<li> <a href="contactus.html"> Contact</a> 
+					</li>
+
+					<li> <a href="about.html"> About Us </a> 
+						<!-- <ul class="subnav">
+							<li> <a href=""> Something </a> </li>
+							<li> <a href=""> Something else </a> </li>
+						</ul> -->
+					</li>
+
+					<li> <a href="photogallery.html"> Photo Gallery </a> </li>
+
+					<li> <a href="keyinfo.html"> Key Info </a> </li>
+
+					<li> <a href="review.html"> Reviews </a> </li>
+
+				</ul>
+			</nav>
+
+		<!-- NAV BAR, don't modify -->
+
+		<article class="homebg"> 
+
+			<div class="content">
+				<a href="" id="slideshowlink">
+					<img id="myPhoto" src="images/slideshow2/stairs3.jpg" alt="Slideshow photo" />
+				</a>
+
+				<a href="" class="ticketslink"> 
+					<img id="tickets" src="./images/buytickets.png" alt="Click to Buy Tickets!" onmouseover="hoverOn(this)" onmouseout="hoverOff(this)" onclick="buyTickets()"/>
+				</a>
+			</div>
+
+			<!-- twitter feed widget code from www.twitter.com/settings/widgets -->
+			<div class="twitterfeed">
+				<a class="twitter-timeline" href="https://twitter.com/LoftusLucifer" data-widget-id="722828797960032256">Tweets by @LoftusLucifer</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+
+			<!--  / end twitter-feed widget -->
+
+			<a href="photogallery.html">
+				<img src="./images/seegallery2.jpg" class="gallery" alt="Click to see our Photo Gallery!" onmouseover="hoverOn(this)" onmouseout="hoverOff(this)" />
+			</a>
+
+			<a href="history.html">
+				<img src="./images/history1.png" class="historyimg" alt="Click to learn more about our History!" onmouseover="hoverOn(this)" onmouseout="hoverOff(this)" />
+			</a>
+
+		</article>
+
+		<footer>
+			©2016 Team 4
+		</footer>
+
+	</body>
+
+</html>
